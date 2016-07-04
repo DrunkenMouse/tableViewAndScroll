@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "ADTestTable.h"
 
 @interface ViewController ()
 
@@ -16,9 +17,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-}
+    
+    ADTestTable *table = [[ADTestTable alloc]init];
+    table.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 400);
 
+    [table awakeFromNib];
+    
+    
+    [self.view addSubview:table];
+    
+}
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    
+    
+    
+    
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
